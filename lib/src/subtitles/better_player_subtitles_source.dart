@@ -19,17 +19,12 @@ class BetterPlayerSubtitlesSource {
   ///Subtitles selected by default, without user interaction
   final bool? selectedByDefault;
 
-  //Additional headers used in HTTP request. Works only for
-  // [BetterPlayerSubtitlesSourceType.memory] source type.
-  final Map<String, String>? headers;
-
   BetterPlayerSubtitlesSource({
     this.type,
     this.name = "Default subtitles",
     this.urls,
     this.content,
     this.selectedByDefault,
-    this.headers,
   });
 
   ///Creates list with only one subtitles
@@ -39,7 +34,6 @@ class BetterPlayerSubtitlesSource {
     String? url,
     String? content,
     bool? selectedByDefault,
-    Map<String, String>? headers,
   }) =>
       [
         BetterPlayerSubtitlesSource(
@@ -48,7 +42,6 @@ class BetterPlayerSubtitlesSource {
           urls: [url],
           content: content,
           selectedByDefault: selectedByDefault,
-          headers: headers,
         )
       ];
 }

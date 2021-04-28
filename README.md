@@ -94,7 +94,7 @@ This plugin is based on [Chewie](https://github.com/brianegan/chewie). Chewie is
 
 ```yaml
 dependencies:
-  better_player: ^0.0.65
+  better_player: ^0.0.63
 ```
 
 2. Install it
@@ -889,8 +889,7 @@ BetterPlayerDataSource dataSource = BetterPlayerDataSource(
         showNotification: true,
         title: "Elephant dream",
         author: "Some author",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/1200px-African_Bush_Elephant.jpg",
-        activityName: "MainActivity",
+        imageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/1200px-African_Bush_Elephant.jpg",
       ),
     );
 ```
@@ -898,8 +897,7 @@ BetterPlayerDataSource dataSource = BetterPlayerDataSource(
 There are 3 majors parameters here:
 title - name of the resource, shown in first line
 author - author of the resource, shown in second line
-imageUrl - image of the resource (optional). Can be both link to external image or internal file
-activityName - name of activity used to open application back on notification click; used only for Activity
+imageUrl - image of the resource (optional). Can be both link to external image or internal file.
 
 If showNotification is set as true and no title and author is provided, then empty notification will be
 displayed.
@@ -1063,18 +1061,9 @@ Default value is false.
 ### More documentation
 https://pub.dev/documentation/better_player/latest/better_player/better_player-library.html
 
-### Cache
-Clear all cached data:
 
-```dart
-betterPlayerController.clearCache();
-```
-Start pre cache before playing video (android only):
-```dart
-betterPlayerController.preCache(_betterPlayerDataSource);
-```
 
-Stop running pre cache (android only):
-```dart
-betterPlayerController.stopPreCache(_betterPlayerDataSource);
-```
+
+
+
+

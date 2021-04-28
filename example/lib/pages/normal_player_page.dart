@@ -20,10 +20,8 @@ class _NormalPlayerPageState extends State<NormalPlayerPage> {
       autoPlay: true,
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
-    _betterPlayerController.setupDataSource(BetterPlayerDataSource(
-      BetterPlayerDataSourceType.network,
-      Constants.bugBuckBunnyVideoUrl,
-    ));
+    _betterPlayerController.setupDataSource(
+        BetterPlayerDataSource.network(Constants.forBiggerBlazesUrl));
     super.initState();
   }
 

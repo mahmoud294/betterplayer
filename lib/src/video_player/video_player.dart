@@ -289,7 +289,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     String? imageUrl,
     String? notificationChannelName,
     Duration? overriddenDuration,
-    String? activityName,
   }) {
     return _setDataSource(
       DataSource(
@@ -302,7 +301,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         imageUrl: imageUrl,
         notificationChannelName: notificationChannelName,
         overriddenDuration: overriddenDuration,
-        activityName: activityName,
       ),
     );
   }
@@ -329,7 +327,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     Duration? overriddenDuration,
     String? licenseUrl,
     Map<String, String>? drmHeaders,
-    String? activityName,
   }) {
     return _setDataSource(
       DataSource(
@@ -348,7 +345,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         overriddenDuration: overriddenDuration,
         licenseUrl: licenseUrl,
         drmHeaders: drmHeaders,
-        activityName: activityName,
       ),
     );
   }
@@ -365,7 +361,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     String? imageUrl,
     String? notificationChannelName,
     Duration? overriddenDuration,
-    String? activityName,
   }) {
     return _setDataSource(
       DataSource(
@@ -376,8 +371,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           author: author,
           imageUrl: imageUrl,
           notificationChannelName: notificationChannelName,
-          overriddenDuration: overriddenDuration,
-          activityName: activityName),
+          overriddenDuration: overriddenDuration),
     );
   }
 
@@ -585,16 +579,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     _videoPlayerPlatform.setMixWithOthers(_textureId, mixWithOthers);
   }
 
-  static Future clearCache() async {
-    return _videoPlayerPlatform.clearCache();
-  }
-
-  static Future preCache(DataSource dataSource, int preCacheSize) async {
-    return _videoPlayerPlatform.preCache(dataSource, preCacheSize);
-  }
-
-  static Future stopPreCache(String url) async {
-    return _videoPlayerPlatform.stopPreCache(url);
+  void clearCache() {
+    _videoPlayerPlatform.clearCache(_textureId);
   }
 }
 

@@ -1,23 +1,3 @@
-## 0.0.65
-* Refactored Android notification image selection.
-* Added headers parameter in BetterPlayerSubtitlesSource. Headers is an optional parameter.
-* Added activityName to BetterPlayerNotificationConfiguration.
-* Android notification will open back application (by https://github.com/shashikantdurge).
-* Fixed playing audio-only resources in iOS.
-* Updated Exo Player version.
-* Fixed notification not updating correctly for playlists in Android.
-* [BREAKING_CHANGE] Removed deprecated Android code. Better Player supports now only v2 embedding.
-
-## 0.0.64
-* Added Turkish translations (by https://github.com/smurat).
-* Video fit fixes (by https://github.com/themadmrj).
-* Fixed speed iOS issue.
-* Fixed Android's notification image OOM issue.
-* Fixed 0 second delay issue in playlist.
-* Fixed drmHeaders to be sent in headers rather than request body (by https://github.com/FlutterSu)
-* Added preCache, stopPreCache method in BetterPlayerController (coauthored with: https://github.com/themadmrj)
-* [BREAKING_CHANGE] clearCache method doesn't require to setup data source in order to use.
-
 ## 0.0.63
 * Fixed pause method in dispose.
 * Added clearCache method in BetterPlayerController.

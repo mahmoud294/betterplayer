@@ -91,18 +91,4 @@ class BetterPlayerTranslations {
         overflowMenuAudioTracks: "الصوت",
         qualityAuto: "ऑटो",
       );
-  factory BetterPlayerTranslations.turkish() => BetterPlayerTranslations(
-      languageCode: "tr",
-      generalDefaultError: "Video oynatılamıyor",
-      generalNone: "Hiçbiri",
-      generalDefault: "Varsayılan",
-      generalRetry: "Tekrar Dene",
-      playlistLoadingNextVideo: "Sonraki video yükleniyor",
-      controlsLive: "CANLI",
-      controlsNextVideoIn: "Sonraki video oynatılmadan",
-      overflowMenuPlaybackSpeed: "Oynatma hızı",
-      overflowMenuSubtitles: "Altyazı",
-      overflowMenuQuality: "Kalite",
-      overflowMenuAudioTracks: "Ses",
-      qualityAuto: "Otomatik");
 }

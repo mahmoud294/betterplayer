@@ -74,16 +74,6 @@ abstract class VideoPlayerPlatform {
     throw UnimplementedError('create() has not been implemented.');
   }
 
-  /// Pre-caches a video.
-  Future<void> preCache(DataSource dataSource, int preCacheSize) {
-    throw UnimplementedError('preCache() has not been implemented.');
-  }
-
-  /// Pre-caches a video.
-  Future<void> stopPreCache(String url) {
-    throw UnimplementedError('stopPreCache() has not been implemented.');
-  }
-
   /// Set data source of video.
   Future<void> setDataSource(int? textureId, DataSource dataSource) {
     throw UnimplementedError('setDataSource() has not been implemented.');
@@ -166,7 +156,7 @@ abstract class VideoPlayerPlatform {
     throw UnimplementedError('setMixWithOthers() has not been implemented.');
   }
 
-  Future<void> clearCache() {
+  Future<void> clearCache(int? textureId) {
     throw UnimplementedError('clearCache() has not been implemented.');
   }
 
@@ -225,7 +215,6 @@ class DataSource {
     this.overriddenDuration,
     this.licenseUrl,
     this.drmHeaders,
-    this.activityName,
   }) : assert(uri == null || asset == null);
 
   /// Describes the type of data source this [VideoPlayerController]
@@ -293,8 +282,6 @@ class DataSource {
   final String? licenseUrl;
 
   final Map<String, String>? drmHeaders;
-
-  final String? activityName;
 
   /// Key to compare DataSource
   String get key {
